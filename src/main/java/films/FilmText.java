@@ -17,4 +17,3 @@ public class FilmText {
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 }
-

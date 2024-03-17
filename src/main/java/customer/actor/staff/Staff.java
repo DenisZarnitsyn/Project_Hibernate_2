@@ -2,6 +2,7 @@ package customer.actor.staff;
 
 import country.city.address.Address;
 import lombok.Data;
+
 import javax.persistence.*;
 import java.sql.Blob;
 import java.time.LocalDateTime;
@@ -46,4 +47,3 @@ public class Staff {
     @Column(name = "last_update", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private LocalDateTime lastUpdate;
 }
-

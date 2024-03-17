@@ -1,9 +1,11 @@
 package rental.payment;
 
 import customer.actor.staff.Customer;
+import customer.actor.staff.CustomerRepository;
 import customer.actor.staff.Staff;
 import inventory.Inventory;
 import lombok.Data;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -37,4 +39,3 @@ public class Rental {
     @Column(name = "last_update", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private LocalDateTime lastUpdate;
 }
-

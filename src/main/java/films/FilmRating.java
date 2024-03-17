@@ -7,4 +7,3 @@ public enum FilmRating {
     R,
     NC_17
 }
-

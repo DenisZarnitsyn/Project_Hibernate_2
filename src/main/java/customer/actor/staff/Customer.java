@@ -1,6 +1,8 @@
 package customer.actor.staff;
 
+import country.city.address.Address;
 import lombok.Data;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -25,8 +27,9 @@ public class Customer {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "address_id", nullable = false)
-    private Short addressId;
+    @ManyToOne
+    @JoinColumn(name = "address_id", referencedColumnName = "address_id", nullable = false)
+    private Address address;
 
     @Column(name = "active", nullable = false)
     private Boolean active;
@@ -36,4 +39,7 @@ public class Customer {
 
     @Column(name = "last_update", columnDefinition = "TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private LocalDateTime lastUpdate;
+
+    public Customer() {
+    }
 }
